@@ -1,36 +1,64 @@
-# Python-Api-Challenge
-Module 6 Asignment
-# Background
-Data's true power is its ability to definitively answer questions. So, let's take what you've learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What is the weather like as we approach the equator?" Now, we know what you may be thinking: “That’s obvious. It gets hotter.” But, if pressed for more information, how would you prove that?
-# Instructions
-This activity is broken down into two deliverables, WeatherPy and VacationPy.
+# 🌎 Python API Challenge: WeatherPy & VacationPy
 
-# Part 1: WeatherPy
-In this deliverable, you'll create a Python script to visualize the weather of over 500 cities of varying distances from the equator. You'll use the citipy Python libraryLinks to an external site., the OpenWeatherMap APILinks to an external site., and your problem-solving skills to create a representative model of weather across cities.
+## 📦 Module 6 Assignment — Data Science & Visualization
 
-For this part, you'll use the WeatherPy.ipynb Jupyter notebook provided in the starter code ZIP file. The starter code will guide you through the process of using your Python coding skills to develop a solution to address the required functionalities.
+---
 
-To get started, the code required to generate random geographic coordinates and the nearest city to each latitude and longitude combination is provided.
+## 📘 Overview
 
-Requirement 1: Create Plots to Showcase the Relationship Between Weather Variables and Latitude
-To fulfill the first requirement, you'll use the OpenWeatherMap API to retrieve weather data from the cities list generated in the starter code. Next, you'll create a series of scatter plots to showcase the following relationships:
+This project explores the power of APIs, Python, and data visualization by answering the question:  
+**“What is the weather like as we approach the equator?”**
 
-Latitude vs. Temperature
+By leveraging the **OpenWeatherMap API**, **Geoapify API**, and geographic data, this challenge is broken into two parts:
 
-Latitude vs. Humidity
+- **WeatherPy** – Analyze and visualize weather data across 500+ global cities.
+- **VacationPy** – Plan ideal vacation locations based on weather and location preferences.
 
-Latitude vs. Cloudiness
+---
 
-Latitude vs. Wind Speed
+## 🔹 Part 1: WeatherPy
 
-Requirement 2: Compute Linear Regression for Each Relationship
-To fulfill the second requirement, compute the linear regression for each relationship. Separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude). You may find it helpful to define a function in order to create the linear regression plots.
+### 🧪 Goal:
+Create a data-driven representation of weather conditions across the globe using randomly selected cities and determine how weather patterns vary with latitude.
 
-Next, create a series of scatter plots. Be sure to include the linear regression line, the model's formula, and the r values
+### 🛠️ Tools & Libraries:
+- Python
+- Jupyter Notebook
+- Pandas, Matplotlib, SciPy
+- `citipy` (to find nearest city to random coordinates)
+- OpenWeatherMap API (for weather data)
 
-# Part 2: VacationPy
-In this deliverable, you'll use your weather data skills to plan future vacations. Also, you'll use Jupyter notebooks, the geoViews Python library, and the Geoapify API.
+### 📊 Key Features:
+- Generate 500+ random cities across global coordinates
+- Call OpenWeatherMap API to fetch real-time weather data
+- Create scatter plots showing relationships between:
+  - **Latitude vs. Temperature**
+  - **Latitude vs. Humidity**
+  - **Latitude vs. Cloudiness**
+  - **Latitude vs. Wind Speed**
+- Perform linear regression for each plot, divided by:
+  - **Northern Hemisphere (latitude ≥ 0)**
+  - **Southern Hemisphere (latitude < 0)**
+- Overlay regression lines with formulas and r-values
 
-The code needed to import the required libraries and load the CSV file with the weather and coordinates data for each city created in Part 1 is provided to help you get started.
+---
 
-Your main tasks will be to use the Geoapify API and the geoViews Python library and employ your Python skills to create map visualizations.
+## 🔹 Part 2: VacationPy
+
+### 🎯 Goal:
+Use the weather data to help plan vacations to cities with ideal weather conditions and visualize these on an interactive map.
+
+### 🛠️ Tools & Libraries:
+- Geoapify API (location and place data)
+- `geoviews` & `hvplot` (interactive maps and plotting)
+- CSV from WeatherPy (weather and coordinates)
+
+### 📍 Key Features:
+- Filter cities by ideal weather conditions (e.g., low humidity, warm temp)
+- Use Geoapify to find nearby hotels
+- Create an interactive map displaying:
+  - Hotel locations
+  - City name, country, temperature
+  - Hover tooltips for easy inspection
+
+---
